@@ -5,6 +5,9 @@
       img.src=LOGO_SRC;
       img.removeAttribute('onerror');
       img.style.display='block';
+      img.style.height='200px';
+      img.style.width='auto';
+      img.style.maxHeight='none';
       var fb=img.nextElementSibling;
       if(fb&&fb.classList&&fb.classList.contains('logo-fallback')){fb.style.display='none';}
     });
