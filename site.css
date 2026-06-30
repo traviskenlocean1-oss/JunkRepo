@@ -1,0 +1,13 @@
+/* SwiftHaul shared nav styles */
+.logo-img {
+  height: 180px;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+@media (max-width: 768px) {
+  .logo-img { height: 120px; }
+}
+@media (max-width: 480px) {
+  .logo-img { height: 90px; }
+}
