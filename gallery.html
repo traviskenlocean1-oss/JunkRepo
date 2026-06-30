@@ -74,6 +74,6 @@ overlay.onclick=closeD;
 document.querySelectorAll('.filter-tabs button').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-tabs button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const filter=btn.dataset.filter;document.querySelectorAll('.gal-item').forEach(item=>{item.style.display=(filter==='all'||item.dataset.cat===filter)?'block':'none';});});});
 </script>
 <script src="cookie-banner.js?v=5"></script>
-<script>setTimeout(function(){var s=document.createElement("style");s.textContent=".navbar{min-height:0!important;height:auto!important}.nav-inner{min-height:0!important;padding:2px 28px!important}.logo-img{height:180px!important;width:auto!important;display:block!important}";document.head.appendChild(s);},100);</script>
+<script>setTimeout(function(){var s=document.createElement("style");s.textContent=".navbar{min-height:0!important;height:auto!important}.nav-inner{";document.head.appendChild(s);},100);</script>
 </body>
 </html>
