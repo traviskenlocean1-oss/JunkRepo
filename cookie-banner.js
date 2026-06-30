@@ -4,10 +4,7 @@
     document.querySelectorAll('.logo-img').forEach(function(img){
       img.src=LOGO_SRC;
       img.removeAttribute('onerror');
-      img.style.display='block';
-      img.style.height='200px';
-      img.style.width='auto';
-      img.style.maxHeight='none';
+      img.style.cssText='display:block!important;height:280px!important;width:auto!important;max-height:none!important';
       var fb=img.nextElementSibling;
       if(fb&&fb.classList&&fb.classList.contains('logo-fallback')){fb.style.display='none';}
     });
@@ -18,7 +15,7 @@
   s.textContent='.cookie-card{position:fixed;left:24px;bottom:24px;z-index:99999;background:#fff;color:#1a1a1a;width:380px;max-width:calc(100vw - 48px);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.28);padding:22px 22px 18px;font-family:Inter,sans-serif;transform:translateY(20px);opacity:0;pointer-events:none;transition:transform .35s ease,opacity .35s ease}.cookie-card.show{transform:translateY(0);opacity:1;pointer-events:auto}.cookie-card p{font-size:14px;line-height:1.6;color:#374151;margin-bottom:10px}.cookie-card a.cb-customize{display:inline-block;font-size:14px;font-weight:600;color:#111827;text-decoration:none;margin-bottom:14px}.cookie-card a.cb-customize:hover{text-decoration:underline}.cb-divider{border-top:1px solid #E5E7EB;margin-bottom:14px}.cb-btn-row{display:flex;gap:10px}.cb-btn-row button{flex:1;border:none;border-radius:999px;background:#374151;color:#fff;font-family:Inter,sans-serif;font-size:13px;font-weight:600;padding:11px 14px;cursor:pointer;transition:background .2s}.cb-btn-row button:hover{background:#1f2937}.cb-btn-row button.cb-enable-all{background:#111827}.cb-btn-row button.cb-enable-all:hover{background:#000}@media(max-width:480px){.cookie-card{left:12px;right:12px;bottom:12px;width:auto}}';
   document.head.appendChild(s);
   var navS=document.createElement('style');
-  navS.textContent='.logo-img{height:200px!important;width:auto!important;max-height:none!important}.nav-inner{padding:8px 28px!important;min-height:216px!important}.navbar{min-height:216px!important}';
+  navS.textContent='.logo-img{height:280px!important;width:auto!important;max-height:none!important}.nav-inner{padding:20px 28px!important;min-height:300px!important}.navbar{min-height:300px!important}';
   document.head.appendChild(navS);
 
   var card=document.createElement('div');
