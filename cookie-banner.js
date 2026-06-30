@@ -21,9 +21,9 @@
   card.innerHTML='<p>We use cookies to enhance site navigation, analyze site usage and assist in our marketing efforts. You can accept these cookies, or you can modify your choices.</p><a href="privacy-policy.html" class="sw-ck-link">Customize cookie consent &rarr;</a><hr class="sw-ck-hr"><div class="sw-ck-btns"><button id="swCkNec">Necessary only</button><button id="swCkAll" style="background:#111827">Enable all</button></div>';
   document.body.appendChild(card);
 
-  if(!localStorage.getItem('swCookieConsent')){setTimeout(function(){card.classList.add('show');},1200);}
-  document.getElementById('swCkAll').onclick=function(){localStorage.setItem('swCookieConsent','all');card.classList.remove('show');};
-  document.getElementById('swCkNec').onclick=function(){localStorage.setItem('swCookieConsent','necessary');card.classList.remove('show');};
+  if(!sessionStorage.getItem('swCookieConsent')){setTimeout(function(){card.classList.add('show');},1200);}
+  document.getElementById('swCkAll').onclick=function(){sessionStorage.setItem('swCookieConsent','all');card.classList.remove('show');};
+  document.getElementById('swCkNec').onclick=function(){sessionStorage.setItem('swCookieConsent','necessary');card.classList.remove('show');};
 
   var ftCols=document.querySelectorAll('.ft-col');
   if(ftCols.length>=2){var ul=ftCols[1].querySelector('ul');if(ul&&!ul.querySelector('a[href="privacy-policy.html"]')){var li=document.createElement('li');li.innerHTML='<a href="privacy-policy.html">Privacy Policy</a>';ul.appendChild(li);}}
